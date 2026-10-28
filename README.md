@@ -15,7 +15,7 @@ which is tracked in App.tsx along with tracking possible search queries and chan
 change is made. All other components are changed to use lucide react icons wherever needed and uses reused classes to
 reduce instances of the same code.
 
-* ### CategoryFilter, ProductCard, ProductGrid, ToastContainer
+* ### CategoryFilter, ProductCard, ProductGrid, ToastContainer + hooks
 
 Product grid gets passed the ProductCards and houses them along with pagination and title + sorting parts, and these
 all within the same component to once clean somewhat clean up the setup since they operate on the same products.
@@ -27,6 +27,12 @@ logging etc.
 
 ProductCard is housed within the ProductGrid while the Category is linked to the grid position-wise within App.tsx to
 keep its position and size relative to each other.
+
+Additionally, I have both cart.ts and toast.ts that use React Hooks for the preexisting functionality built for the
+previous workshop, both for saving/adding/loading a cart and keeping track of its count, along with limiting the amount
+of toasts visible to the user. Both are very simply, more so something to make me understand a few of the states
+available, their uses, the TS syntax for functions, how type constraints work and should be handled, 
+and several other built-in parts of TS (prev, find, spread, etc.)
 
 TODO, slightly optional: 
 * still extended functionality from previous workshop, which would in tandem reduce reused classes + more shared props

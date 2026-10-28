@@ -1,3 +1,5 @@
+//types used in several parts of project
+
 export type Product = {
     id: number;
     name: string;

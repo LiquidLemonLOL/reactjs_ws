@@ -21,11 +21,11 @@ const ProductGrid = ({ products, onAdd }: ProductGridProps)=>  {
                     <span className="hidden sm:inline">Sort by:</span>
                     <div className="relative">
                         <select
-                            className="appearance-none border border-slate-200 bg-white rounded-[0.75rem] py-2 pl-3 pr-9 text-sm text-slate-950 transition-all duration-200 outline-none cursor-pointer focus:border-blue-400 focus:ring-4 focus:ring-blue-600/10">
-                            <option selected>Newest</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                            <option>Best Selling</option>
+                            defaultValue="newest" className="appearance-none bg-white rounded-[0.75rem] py-2 pl-3 pr-9 text-sm text-slate-950 transition-all duration-200 outline-none cursor-pointer focus:border-blue-400 focus:ring-4 focus:ring-blue-600/10">
+                            <option value="newest">Newest</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="best-selling">Best Selling</option>
                         </select>
                         <span
                             className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-400">

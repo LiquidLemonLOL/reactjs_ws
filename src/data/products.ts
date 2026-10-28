@@ -1,5 +1,6 @@
 import type { Product } from "../types";
 
+// array of all products, badge and rating added to be more flexible in landing page design
 export const products: Product[] = [
     {
         id: 1,

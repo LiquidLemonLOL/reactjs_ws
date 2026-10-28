@@ -1,5 +1,3 @@
-
-
 const Newsletter = () => {
     return (
         <section className="mt-12 bg-slate-900 py-16 text-white overflow-hidden relative">

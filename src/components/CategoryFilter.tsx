@@ -9,6 +9,10 @@ type CategoryFilterProps = {
 
 const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFilterProps) => {
 
+    /* Same toggle as previous workshop + TS spread operator , when toggles change (checkbox clicked) -
+    check if category selected, adds if not, removes if it is. filter keeps any category not named the
+     specified category, [...selected, category] joins category to selected array
+     */
     const toggle = (category: string) =>
         onChange(selected.includes(category) ? selected.filter((selectedCategory) => selectedCategory !== category) : [...selected, category]
         );
@@ -31,6 +35,8 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
 
                     <div className="space-y-3">
                         <label className="flex items-center gap-3 cursor-pointer select-none">
+                            {/* reused checkbox class, shows all categories by resetting any filters, show all
+                             categories on change */}
                             <input type="checkbox"
                                    value="all"
                                    className={checkBoxClass}
@@ -44,6 +50,8 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
 
                         {categories.map((category) => (
                             <label key={category} className="flex items-center gap-3 cursor-pointer select-none">
+                                {/* checked is true if selected categories include specified category, calls
+                                 filtering upon change */}
                                 <input type="checkbox"
                                        className={checkBoxClass}
                                        checked={selected.includes(category)}

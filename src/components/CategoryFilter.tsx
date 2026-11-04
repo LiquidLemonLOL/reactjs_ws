@@ -22,14 +22,14 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
 
     return (
         <aside className="lg:sticky lg:top-20 self-start">
-            <div className="border border-slate-200 rounded-[1.25rem] bg-slate-50/50 backdrop-blur-sm shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-400 p-5">
+            <div className="border border-slate-200 dark:border-slate-700 rounded-[1.25rem] bg-slate-50/50 backdrop-blur-sm shadow-sm transition-all dark:bg-slate-800 duration-300 hover:shadow-xl hover:border-blue-400 p-5">
                 <section aria-labelledby="filters-categories" className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <h2 id="filters-categories" className="text-sm font-bold text-slate-900">Categories</h2>
+                        <h2 id="filters-categories" className="text-sm font-bold dark:text-slate-300 text-slate-900">Categories</h2>
                         <button
                             type="button"
                             aria-label="Filters"
-                            className="lg:hidden text-slate-400 hover:text-blue-600 transition-colors">
+                            className="lg:hidden dark:text-slate-300 text-slate-400 hover:text-blue-600 transition-colors">
                         </button>
                     </div>
 
@@ -43,7 +43,7 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
                                    checked={selected.length === 0}
                                    onChange={() => onChange([])}
                             />
-                            <span className="flex-1 text-sm text-slate-700">
+                            <span className="flex-1 text-sm text-slate-700 dark:text-slate-300">
                                 All Products{" "}
                             <span className="text-slate-400 font-normal">{products.length}</span></span>
                         </label>
@@ -57,7 +57,7 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
                                        checked={selected.includes(category)}
                                        onChange={() => toggle(category)}
                                 />
-                                <span className="flex-1 text-sm text-slate-700 font-medium">
+                                <span className="flex-1 text-sm text-slate-700 font-medium dark:text-slate-300">
                                     {category}{" "}
                                     <span className="text-slate-400 font-normal">
                                         ({products.filter((product) => product.category === category).length})
@@ -70,9 +70,9 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
                 <div className="my-5 h-px bg-slate-100"></div>
 
                 <section aria-labelledby="filters-price" className="space-y-3">
-                    <h2 id="filters-price" className="text-sm font-bold text-slate-900">Price Range</h2>
+                    <h2 id="filters-price" className="text-sm font-bold text-slate-900 dark:text-slate-300">Price Range</h2>
 
-                    <div className="flex items-center justify-between text-xs text-slate-500">
+                    <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-200">
                         <span>0 kr</span>
                         <span>1800 kr</span>
                     </div>
@@ -90,19 +90,19 @@ const CategoryFilter = ({ categories, products, selected, onChange }: CategoryFi
                 <div className="my-5 h-px bg-slate-100"></div>
 
                 <section aria-labelledby="filters-availability" className="space-y-4">
-                    <h2 id="filters-availability" className="text-sm font-bold text-slate-900">Availability</h2>
+                    <h2 id="filters-availability" className="text-sm font-bold text-slate-900 dark:text-slate-300">Availability</h2>
 
                     <div className="space-y-3">
                         <label className="flex items-center gap-3 cursor-pointer select-none">
                             <input type="checkbox"
                                    className={checkBoxClass}/>
-                            <span className="flex-1 text-sm text-slate-700">In Stock</span>
+                            <span className="flex-1 text-sm text-slate-700 dark:text-slate-300">In Stock</span>
                         </label>
 
                         <label className="flex items-center gap-3 cursor-pointer select-none">
                             <input type="checkbox"
                                    className={checkBoxClass}/>
-                            <span className="flex-1 text-sm text-slate-700">On Sale</span>
+                            <span className="flex-1 text-sm text-slate-700 dark:text-slate-300">On Sale</span>
                         </label>
                     </div>
                 </section>

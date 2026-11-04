@@ -34,7 +34,7 @@ const ProductCard = ({ product, onAdd }: ProductCardProps) => {
                 <span
                     className="absolute left-3 top-3 px-3 py-1 text-[11px] font-bold rounded-full border border-slate-800 bg-slate-950 text-slate-200 backdrop-blur-md">{product.badge}</span>
                 <button type="button"
-                        className="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/50 bg-white/70 text-slate-600 backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-rose-500 hover:shadow-lg group/heart"
+                        className="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-xl dark:bg-slate-950 dark:hover:bg-slate-950 border border-slate-200/50 bg-white/70 text-slate-600 backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-rose-500 hover:shadow-lg group/heart"
                         aria-label="Add to favorites" title="Favorite">
                     <Heart/>
                 </button>
@@ -42,21 +42,21 @@ const ProductCard = ({ product, onAdd }: ProductCardProps) => {
 
             <div className="mt-4 px-1 pb-2 space-y-1">
                 <div className="flex items-center justify-between">
-                    <p className="text-[10px] font-black uppercase tracking-[0.15em] text-blue-600/70">
+                    <p className="text-[12px] font-black uppercase tracking-[0.15em] text-blue-600/70 dark:text-slate-300">
                         {product.category}</p>
                     <div className="flex items-center gap-1">
                         <Star size={10} color="gold" strokeWidth={4} />
-                        <span className="text-[10px] font-bold text-slate-400">{product.rating}</span>
+                        <span className="text-[12px] font-bold text-slate-400">{product.rating}</span>
                     </div>
                 </div>
-                <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-200 group-hover:text-blue-600 transition-colors">
                     {product.name}</h3>
-                <p className="text-[11px] font-medium text-slate-500">{product.availability}</p>
+                <p className="text-[11px] font-medium dark:text-slate-300 text-slate-500">{product.availability}</p>
                 <div className="flex items-center justify-between gap-3 pt-3">
-                    <span className="text-lg font-black text-slate-900 tracking-tight">{formatPrice(product.price)}
+                    <span className="text-lg font-black dark:text-slate-300 text-slate-900 tracking-tight">{formatPrice(product.price)}
                     </span>
                     <button type="button" onClick={() => onAdd(product)}
-                            className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 text-xs font-bold text-white transition-all duration-300 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-200 active:scale-95 group/btn"
+                            className="inline-flex h-10 items-center justify-center gap-2 rounded-xl dark:bg-blue-800 bg-slate-900 px-5 text-xs font-bold text-white transition-all duration-300 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-200 active:scale-95 group/btn"
                             aria-label="Add to cart">
                         <ShoppingCart size={14}/>
                         Add to cart

@@ -10,7 +10,7 @@ type HeaderProps = {
 const Header = ( {query, cartCount, onQueryChange}: HeaderProps) => {
     const { theme, toggleTheme } = useTheme();
     return (
-        <header className="w-full items-center justify-between sticky top-0 z-40 border-b border-blue-700/30 bg-blue-600 shadow-lg shadow-blue-900/10">
+        <header className="w-full items-center justify-between sticky top-0 z-40 border-b border-blue-700/30 bg-blue-600 dark:bg-blue-900 shadow-lg shadow-blue-900/10">
             <div className="mx-auto flex w-full items-center justify-between px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto flex h-16 items-center justify-between">
                     <a href="#" className="flex items-center gap-2 font-bold tracking-tight text-white">

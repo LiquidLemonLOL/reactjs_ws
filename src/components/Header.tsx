@@ -1,4 +1,5 @@
-import { Package, ShoppingBag, User, Search } from 'lucide-react';
+import { Package, ShoppingBag, User, Search, Sun, Moon } from 'lucide-react';
+import { useTheme } from "../hooks/useTheme";
 
 type HeaderProps = {
     query: string;
@@ -7,6 +8,7 @@ type HeaderProps = {
 };
 
 const Header = ( {query, cartCount, onQueryChange}: HeaderProps) => {
+    const { theme, toggleTheme } = useTheme();
     return (
         <header className="w-full items-center justify-between sticky top-0 z-40 border-b border-blue-700/30 bg-blue-600 shadow-lg shadow-blue-900/10">
             <div className="mx-auto flex w-full items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -69,6 +71,10 @@ const Header = ( {query, cartCount, onQueryChange}: HeaderProps) => {
                                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/30 text-blue-50 transition-all duration-200 hover:text-white hover:bg-blue-500/50 border border-blue-400/20"
                                 aria-label="Account" title="Account">
                             <User />
+                        </button>
+                        <button type="button" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme"
+                                className="rounded-xl p-2 text-white bg-blue-500/30 hover:bg-blue-500/50 border border-blue-400/20 transition-all duration-200 inline-flex h-10 w-10 items-center justify-center">
+                            {theme === "dark" ? <Sun /> : <Moon />}
                         </button>
                     </div>
                 </div>

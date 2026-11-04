@@ -20,3 +20,5 @@ export type Toast = {
     id: string;
     message: string;
 }
+
+export type Theme = "light" | "dark";

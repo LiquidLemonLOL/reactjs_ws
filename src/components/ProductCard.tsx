@@ -13,7 +13,7 @@ const formatPrice = (price: number) =>
 const ProductCard = ({ product, onAdd }: ProductCardProps) => {
     return (
         <article
-            className="border border-slate-200 rounded-[1.25rem] bg-white p-3 transition-all duration-400 hover:border-blue-400 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 group">
+            className="border border-slate-200 dark:bg-slate-900 dark:border-slate-700  rounded-[1.25rem] bg-white p-3 transition-all duration-400 hover:border-blue-400 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 group">
 
             <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                 <img src={product.image} alt={product.name}
